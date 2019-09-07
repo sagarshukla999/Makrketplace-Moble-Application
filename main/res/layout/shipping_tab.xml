@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".ShippingTab"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:padding="13dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/truck"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="Sold By"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:shrinkColumns="1"
+        android:stretchColumns="1"
+        android:id="@+id/soldBy">
+
+        <TableRow
+            android:id="@+id/storeNameRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:text="Store Name" />
+
+            <TextView
+                android:id="@+id/storeNameValue"
+                android:layout_marginLeft="10dp"
+                android:autoLink="phone"
+                android:textColor="#BCA5D8"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/feedbackScoreRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:text="Feedback Score" />
+
+            <TextView
+                android:id="@+id/feedbackScoreValue"
+                android:layout_marginLeft="10dp"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:padding="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/popularityRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dp"
+                android:text="Popularity" />
+
+
+            <com.wssholmes.stark.circular_score.CircularScoreView
+                android:id="@+id/popularityValue"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="18dp"
+                app:score="50"
+                app:setPrimaryColor="#a4c639"
+                app:setSecondaryColor="#d0d05e"
+                app:setBackgroundColor="#ffffff"
+                app:setTextColor="#000000"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/feedbackStarRow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dp"
+                android:text="Feedback Star" />
+
+            <ImageView
+                android:id="@+id/feedbackStarValue"
+                android:layout_marginRight="215dp"
+                android:src="@drawable/truck"/>
+
+        </TableRow>
+
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:padding="13dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:padding="13dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ferry"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="Shipping Info"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:shrinkColumns="1"
+
+        android:stretchColumns="1"
+        android:id="@+id/shippingInfo">
+
+        <TableRow
+            android:id="@+id/shippingCostRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Shipping Cost" />
+
+            <TextView
+                android:id="@+id/shippingCostValue"
+                android:layout_marginLeft="10dip"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/globalShippingRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Global Shipping" />
+
+            <TextView
+                android:id="@+id/globalShippingValue"
+                android:layout_marginLeft="10dip"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/handlingTimeRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Handling Time" />
+
+            <TextView
+                android:id="@+id/handlingTimeValue"
+                android:layout_marginLeft="10dip"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/conditionRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Condition" />
+
+            <TextView
+                android:id="@+id/conditionValue"
+                android:layout_marginLeft="10dip"
+                android:gravity="left"
+                android:padding="8dip"/>
+
+        </TableRow>
+
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:padding="13dp"
+        android:background="@android:color/darker_gray"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:padding="13dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/dump_truck"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="Return Policy"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:shrinkColumns="1"
+
+        android:stretchColumns="1"
+        android:id="@+id/returnPolicy"
+        android:layout_below="@id/returnPolicy">
+
+        <TableRow
+            android:id="@+id/policyRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Policy" />
+
+            <TextView
+                android:id="@+id/policyValue"
+                android:layout_marginLeft="10dip"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/returnsWithinRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Returns Within" />
+
+            <TextView
+                android:id="@+id/returnsWithinValue"
+                android:layout_marginLeft="10dip"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/refundModeRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Refund Mode" />
+
+            <TextView
+                android:id="@+id/refundModeValue"
+                android:layout_marginLeft="10dip"
+                android:gravity="left"
+                android:padding="8dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/shippedByRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:padding="8dip"
+                android:text="Shipped By" />
+
+            <TextView
+                android:id="@+id/shippedByValue"
+                android:layout_marginLeft="10dip"
+                android:gravity="left"
+                android:padding="8dip"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:text="No Shipping Information"
+        android:id="@+id/noShippingInformation"/>
+
+
+</LinearLayout>
+</ScrollView>
